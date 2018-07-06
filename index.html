@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>My site</title>
+    <script src="libs/pdfmake.min.js"></script>
+    <script src="libs/vfs_fonts.js"></script>
+  </head>
+  <script type="text/javascript">
+    function test_export() {
+      var docDefinition = {
+        content: [
+          'First paragraph',
+          'Another paragraph, this time a little bit longer to make sureeeee, this line will be divided into at least two lines'
+        ]
+      }
+      pdfMake.createPdf(docDefinition).download();
+    }
+  </script>
+<body>
+  <br />
+  <a href="javascript:test_export()" class="button">Export PDF</a>
+</body>
+</html>
