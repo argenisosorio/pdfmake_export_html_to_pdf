@@ -10,8 +10,8 @@
     function test_export() {
       var docDefinition = {
         content: [
-          'First paragraph',
-          'Another paragraph, this time a little bit longer to make sureeeee, this line will be divided into at least two lines'
+          {text: 'This is a link', link: 'http://google.com'},
+          {text:'Go to page 2', linkToPage: 2}
         ]
       }
       pdfMake.createPdf(docDefinition).download();
