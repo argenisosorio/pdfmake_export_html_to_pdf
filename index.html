@@ -9,12 +9,15 @@
   <script type="text/javascript">
     function test_export() {
       var docDefinition = {
+        info: {
+          title: 'My title document',
+        },
         content: [
           'First paragraph',
           'Another paragraph, this time a little bit longer to make sureeeee, this line will be divided into at least two lines'
         ]
       }
-      pdfMake.createPdf(docDefinition).download();
+      pdfMake.createPdf(docDefinition).download('My document.pdf');
     }
   </script>
 <body>
